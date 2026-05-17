@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>💖 قصة حب 💖</title>
+  <meta name="description" content="A romantic love story experience 💖">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+</head>
+
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-heart">💖</div>
+    <div class="loading-text">...جاري تحضير المفاجأة 💕</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- ===== HIDDEN YOUTUBE PLAYER ===== -->
+  <div class="yt-hidden" id="ytPlayer"></div>
+
+  <!-- ===== CORNER STICKERS ===== -->
+  <div class="corner-sticker corner-tl"><img src="https://media.giphy.com/media/2KBWI5C7A7NqRFT9Uy/giphy.gif"
+      alt="cute sticker" loading="lazy"></div>
+  <div class="corner-sticker corner-tr"><img src="https://media.giphy.com/media/D8Gz7nMuAcC7sJ6Bbn/giphy.gif"
+      alt="cute sticker" loading="lazy"></div>
+  <div class="corner-sticker corner-bl"><img src="https://media.giphy.com/media/D8Gz7nMuAcC7sJ6Bbn/giphy.gif"
+      alt="cute sticker" loading="lazy"></div>
+  <div class="corner-sticker corner-br"><img src="https://media.giphy.com/media/2KBWI5C7A7NqRFT9Uy/giphy.gif"
+      alt="cute sticker" loading="lazy"></div>
+
+  <!-- ===== FLOATING ELEMENTS CONTAINER ===== -->
+  <div class="floating-container" id="floatingContainer"></div>
+
+  <!-- ===== HEART RAIN CONTAINER ===== -->
+  <div class="heart-rain" id="heartRain"></div>
+
+  <!-- ===== SLIDES CONTAINER ===== -->
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- SLIDE 1: First Screen -->
+    <div class="slide active" id="slide-0">
+      <div class="glass-card">
+        <span class="first-screen-decor">🐱</span>
+        <span class="first-screen-decor">💖</span>
+        <span class="first-screen-decor">✨</span>
+        <span class="first-screen-decor">🐱</span>
+        <div class="card-emoji">🐱💖✨</div>
+        <div class="title-text">دادي حاب يحكيلك قصة 💖</div>
+        <div class="card-emoji">💕🌸💕</div>
+        <div class="nav-buttons">
+          <button class="btn btn-next" onclick="goToSlide(1)">💖 يلا نبداو</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Second Screen -->
+    <div class="slide" id="slide-1">
+      <div class="glass-card">
+        <div class="card-emoji">💕✨</div>
+        <div class="card-text">كيفاه خممت فالهدايا وواش نجيبلك بالضبط ؟ 💕✨</div>
+        <div class="card-emoji">🎁💝🎀</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(0)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(2)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Dog Sticker Funny -->
+    <div class="slide" id="slide-2">
+      <div class="glass-card">
+        <div class="card-emoji">😂💀✨</div>
+        <div class="card-text">حقا حقااااا 😂 الحمدلله ماجبتيليش الزنوج يحووني  💀</div>
+        <div class="card-sticker dog-sticker">
+          <img src="images/dog-sticker.png" alt="funny dog sticker">
+        </div>
+        <div class="card-emoji">🐶😂✨</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(1)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(3)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Back to topic - Girl + Anime -->
+    <div class="slide" id="slide-3">
+      <div class="glass-card cute-card">
+        <!-- Floating hearts & sparkles -->
+        <span class="mini-float-heart" style="top:5%;left:8%;animation-delay:0s;">💕</span>
+        <span class="mini-float-heart" style="top:12%;right:10%;animation-delay:0.5s;">✨</span>
+        <span class="mini-float-heart" style="bottom:18%;left:12%;animation-delay:1s;">💖</span>
+        <span class="mini-float-heart" style="bottom:10%;right:8%;animation-delay:1.5s;">💗</span>
+        <span class="mini-float-heart" style="top:25%;left:5%;animation-delay:2s;">✨</span>
+        <span class="mini-float-heart" style="top:8%;left:45%;animation-delay:0.8s;">💕</span>
+        <span class="mini-float-heart" style="bottom:25%;right:15%;animation-delay:2.2s;">💖</span>
+        <span class="mini-float-heart" style="top:18%;right:5%;animation-delay:1.3s;">✨</span>
+        <div class="card-emoji">✨🐱💕</div>
+        <div class="card-text">المهم نرجعو لموضوعنا ✨🐱</div>
+        <div class="card-sticker">
+          <img src="images/anime-girl.png" alt="anime girl sticker">
+        </div>
+        <div class="card-emoji">💖🌸💖</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(2)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(4)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: Rabbit Gift -->
+    <div class="slide" id="slide-4">
+      <div class="glass-card">
+        <div class="card-emoji">💗🐰</div>
+        <div class="card-text">اول هدية, الارنوب, قلتيلي بلي تحبي الارانب الكيوت, ايا انا خممت نجيبلك ارنوب كيوت تولي كل يوم ترقدي معاه وتحضنيه ويفكرك فيا, 💗🐰</div>
+        <div class="card-sticker">
+          <img src="https://media.giphy.com/media/fa7iHSsZ4nkmniMeVv/giphy.gif" alt="rabbit sticker">
+        </div>
+        <div class="card-emoji">🌸💖🌸</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(3)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(5)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Dolphin Gift -->
+    <div class="slide" id="slide-5">
+      <div class="glass-card silver-glow-card">
+        <span class="dolphin-float" style="top:5%;left:5%;animation-delay:0s;">🐬</span>
+        <span class="dolphin-float" style="top:8%;right:8%;animation-delay:1s;">🐬</span>
+        <span class="dolphin-float" style="bottom:12%;left:10%;animation-delay:2s;">🐬</span>
+        <span class="dolphin-float" style="bottom:8%;right:5%;animation-delay:2.5s;">✨</span>
+        <div class="card-emoji">🐬💎💖</div>
+        <div class="card-text">الكادو الثاني واللي هو الدلفين, خممت في اكسسوار نجيبهولك بزاف ايا تفكرت حاجة, تفكرت مين
+          قلتيلي رقبتي فارغة, هنا طاحت عليا الفكرة, نضت وبديت نحوس بين حوانت الذهب ندور من سايغي لسايغي, جبتها نهار كامل
+          حتى لقيت الدلفييييين وتفكرت الايموجي لي نحبوه حنا, وقلت وش خير من اني ندي دلفين كيوت فضي من ساسو لراسو
+          هيهيهيهي, ايا كوني دلفينتي وخلينا نعومو معا بعض فالبحر الابيض المتوسط 🐬💎💖</div>
+        <div class="card-sticker">
+          <img src="https://media.giphy.com/media/BqjYZq0yMVRYvyCfgL/giphy.gif" alt="dolphin sticker">
+        </div>
+        <div class="card-emoji">✨🐬✨</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(4)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(6)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Handwritten Letter -->
+    <div class="slide" id="slide-6">
+      <div class="glass-card">
+        <div class="card-emoji">🌹💌✨</div>
+        <div class="card-text handwritten-text">القرعة والورقة هاذي مالقري خطي معوق 😂 بصح حاولت نكتبها بطريقة شابة,
+          حبيت نمدلك حاجة بيدي نكون كاتبها بتعبي بش تقرايها ونكتبلك فيها قيمتك عندي يا نور عينيا 🌹💌✨</div>
+        <div class="card-emoji">💕🌸💕</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(5)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(7)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Emotional -->
+    <div class="slide" id="slide-7">
+      <div class="glass-card">
+        <div class="card-emoji">❤️✨🐱</div>
+        <div class="card-text">هاذا الديت انا تعبت فيه بزاف بش نفرحك صراحة, وقت مابين تخمام وتوجاد ويامات فالتحضير لأتفه
+          الامور والتعب تاع السفر, عليها ياربي تكوني فرحتي وعجبك لحال, والحمدلله لي ربي جمعنا في هاذي الدنيا, نت جيتيني
+          رزق من السما نشوف في وجهك برك ننسا همي كامل, حابك ديما تكوني ليا وتاعي وحدي ديما, ربي يخليلي عبير لي نبغيها,
+          حبيت نقولك بلي نحبك, نحبك كثر من كل الناس وقلبي غادي يبقا يشوف غير فيك حياتي كاملة ❤️✨🐱</div>
+        <div class="card-emoji">💖🌙💖</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(6)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="goToSlide(8)">التالي 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: Final Screen -->
+    <div class="slide" id="slide-8">
+      <div class="glass-card">
+        <div class="final-intro">وديما تفكري بلي: 💕</div>
+        <div class="final-poem">
+          Roses are Red, Violets Are Blue<br>
+          Nobody Is Gonna<br>
+          <span class="love-you-text">LOVE YOU</span>
+          The way I DO ❤️🌹✨
+        </div>
+        <div class="card-sticker big">
+          <img src="https://media.giphy.com/media/8PPX8J5LDlzh1HQj0B/giphy.gif" alt="love sticker">
+        </div>
+        <div class="card-emoji">💖🐱✨💕🌸💖</div>
+        <div class="nav-buttons">
+          <button class="btn btn-back" onclick="goToSlide(7)">💕 رجوع</button>
+          <button class="btn btn-next" onclick="triggerFinalExplosion()">💖 أحبك أكثر</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /slides-container -->
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
